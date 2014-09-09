@@ -59,3 +59,162 @@ html, button, input, select, textarea,
   padding: 5px 20px;
   margin-top: 0;
 }
+
+/* Buttons */
+/* line 53, ../sass/_custom.scss */
+.buttons button {
+  margin: 5px auto;
+  display: block;
+}
+/* line 57, ../sass/_custom.scss */
+.buttons p {
+  text-align: center;
+}
+
+/* line 62, ../sass/_custom.scss */
+.fancy-btn-ctn .black-bg {
+  background: #1b1f23;
+  border-radius: 4px;
+}
+
+/* line 67, ../sass/_custom.scss */
+.btn-primary {
+  border-radius: 2px;
+  outline: 0;
+  /*border: 2px solid #26A25A;*/
+  padding: .5em 1em;
+  background: #26A25A;
+  color: #fff;
+  font-size: 110%;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-align: center;
+  zoom: 1;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+/* line 86, ../sass/_custom.scss */
+.btn-primary:hover {
+  background: #27ae60;
+}
+
+/* line 90, ../sass/_custom.scss */
+button {
+  border-radius: 2px;
+  outline: 0;
+  border: 0 rgba(0, 0, 0, 0);
+  padding: .5em 1em;
+  background: #e1f2fa;
+  color: #5992aa;
+  font-size: 110%;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-align: center;
+  zoom: 1;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+/* line 109, ../sass/_custom.scss */
+button:hover {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+}
+
+/* line 113, ../sass/_custom.scss */
+.pure-button {
+  font-size: 110%;
+}
+
+/* line 116, ../sass/_custom.scss */
+.fancy-green {
+  box-sizing: border-box;
+  background: transparent;
+  border: 2px solid #E4E4E4 !important;
+  border-bottom: 1px solid #d5d6d6;
+  border-radius: 5px;
+  padding: 16px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #E4E4E4;
+  outline: none;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+/* line 132, ../sass/_custom.scss */
+.fancy-green:hover {
+  background: #27ae60 !important;
+  border: 2px solid #27ae60 !important;
+  border-bottom: 1px solid #d5d6d6;
+  color: #fff !important;
+}
+
+/* line 139, ../sass/_custom.scss */
+.fancy-orange {
+  box-sizing: border-box;
+  background: none;
+  border: 2px solid #e74c3c;
+  border-radius: 5px;
+  padding: 16px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #e74c3c;
+  outline: none;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+/* line 154, ../sass/_custom.scss */
+.fancy-orange:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+
+/* line 159, ../sass/_custom.scss */
+.fancy-black {
+  box-sizing: border-box;
+  background: #fff;
+  border: 2px solid #303336 !important;
+  border-bottom: 1px solid #d5d6d6;
+  border-radius: 5px;
+  padding: 16px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #303336;
+  outline: none;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+/* line 175, ../sass/_custom.scss */
+.fancy-black:hover {
+  background: #303336 !important;
+  border: 2px solid #303336 !important;
+  border-bottom: 1px solid #d5d6d6;
+  color: #fff !important;
+}
+
+/* buttons end */
+/* line 183, ../sass/_custom.scss */
+.heading h3 {
+  display: inline-block;
+  padding: 1em 4em 1em 1em;
+  margin: 0;
+  background: #E74C3C;
+  color: #fff;
+}
