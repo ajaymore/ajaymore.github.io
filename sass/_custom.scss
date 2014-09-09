@@ -1,0 +1,49 @@
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: Helvetica neue, Helvetica, 'Sans Serif';
+}
+#menu{
+    background: #1b1f23;
+}
+#menu .pure-menu-selected, #menu .pure-menu-heading {
+    background: #e74c3c;
+}
+.indv-r-ctnr{
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+    li{
+        display: inline-block;
+    }    
+}
+#canvas-ctnr{
+    canvas {
+        margin: 0 auto;
+        display: block;
+    }
+}
+.SlidersCtnr {
+    padding: 10px 20px;
+}
+.slider-grp {
+    padding: 10px;
+}
+#canvas-modify-ctnr{
+    p{
+        text-align: right;
+        background: rgba(#2ECC71, 0.40);
+        padding: 5px 20px;
+        margin-top: 0;
+    }
+}
+#canvas-ctnr{
+    p{
+        text-align: left;
+        background: rgba(#2ECC71, 0.40);
+        padding: 5px 20px;
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,61 @@
+/* line 2, ../sass/_custom.scss */
+html, button, input, select, textarea,
+.pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: Helvetica neue, Helvetica, 'Sans Serif';
+}
+
+/* line 6, ../sass/_custom.scss */
+#menu {
+  background: #1b1f23;
+}
+
+/* line 9, ../sass/_custom.scss */
+#menu .pure-menu-selected, #menu .pure-menu-heading {
+  background: #e74c3c;
+}
+
+/* line 12, ../sass/_custom.scss */
+.indv-r-ctnr {
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+}
+/* line 18, ../sass/_custom.scss */
+.indv-r-ctnr li {
+  display: inline-block;
+}
+
+/* line 23, ../sass/_custom.scss */
+#canvas-ctnr canvas {
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 28, ../sass/_custom.scss */
+.SlidersCtnr {
+  padding: 10px 20px;
+}
+
+/* line 31, ../sass/_custom.scss */
+.slider-grp {
+  padding: 10px;
+}
+
+/* line 35, ../sass/_custom.scss */
+#canvas-modify-ctnr p {
+  text-align: right;
+  background: rgba(46, 204, 113, 0.4);
+  padding: 5px 20px;
+  margin-top: 0;
+}
+
+/* line 43, ../sass/_custom.scss */
+#canvas-ctnr p {
+  text-align: left;
+  background: rgba(46, 204, 113, 0.4);
+  padding: 5px 20px;
+  margin-top: 0;
+}
