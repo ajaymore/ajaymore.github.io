@@ -4,7 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale=1.0">
         <title>HTML5 portfolio</title>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet'>
+        <link type="text/css" rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
         <link href="lib/slider/css/simple-slider.css" rel="stylesheet">
+        <link href="lib/dropdown/dropdown.css" rel="stylesheet">
         <link href="lib/pure/pure-min.css" rel="stylesheet">
         <link href="lib/pure/grids-responsive-min.css" rel="stylesheet">
         <link rel="shortcut icon" href="img/favicon.ico">
@@ -26,16 +29,16 @@
             </a>
             <div id="menu">
                 <div class="pure-menu pure-menu-open">
-                    <a class="pure-menu-heading" href="#">Company</a>
+                    <a class="pure-menu-heading" href="#">HTML5 Rocks</a>
 
-                    <ul>
+                    <ul class="nav-left">
                         <li class="pure-menu-selected">
                             <a href="#canvas-demo">Canvas api</a>
                         </li>
                         <li><a href="#form-demo">Form Elements</a></li>
-                        <li><a href="#">Responsive</a></li>
-                        <li><a href="#">Javascript</a></li>
-                        <li><a href="#">Tooling</a></li>
+                        <li><a href="#demo-responsive">Responsive</a></li>
+                        <li><a href="#demo-jstools">Tools</a></li>
+                        <li><a href="#demo-content">Content focus</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,7 +49,7 @@
                     <h2>Harness the power of beautiful and elegant HTML5 standards and embrace the future of web
                         development.</h2>
                 </div>
-                <div id="canvas-demo" class="pure-g">
+                <div id="canvas-demo" class="pure-g anchor">
                     <div class="pure-u-1 heading"><h3>HTML5 canvas app</h3></div>
                     <div id="canvas-ctnr" class="pure-u-1 pure-u-md-1-2">
                         <p>Click and drag on the canvas to draw.</p>
@@ -95,7 +98,7 @@
                         </ul>
                     </div>
                 </div>
-                <div id="form-demo" class="pure-g">
+                <div id="form-demo" class="pure-g anchor">
                     <div class="pure-u-1 heading"><h3>Beautiful form elements</h3></div>
                 </div>
                 <div class="pure-g buttons">
@@ -127,18 +130,126 @@
                         </div>
                     </div>
                 </div>
-                <br/>
-                <section class="pure-u-1">Beautiful forms</section>
-                <section class="pure-u-1">Responsive Design With Twitter bootstrap, foundation</section>
-                <section class="pure-u-1">Focus on content with flat design</section>
-                <section class="pure-u-1">Rock solid client apps with jQuery and AngularJS</section>
-                <section class="pure-u-1">Best web development practices from HTML5 boilerplate, modernizer and normalize.css</section>
-                <section class="pure-u-1">Use of cut edge tools like SASS, grunt, jasmine, karma for development workflow</section>
+                <div class="pure-g inputs">
+                    <p class="pure-u-1">Form inputs</p>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <input type="text" value="Success" placeholder="Success" class="has-success input-control">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <input type="text" value="Error" placeholder="Error" class="input-control has-error">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <input type="text" value="Warning" placeholder="Warning" class="input-control has-warning">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <input type="text" value="Inactive" placeholder="Inactive" disabled="disabled"
+                               class="input-control">
+                    </div>
+                </div>
+                <div class="pure-g form-others">
+                    <p class="pure-u-1">Dropdowns and checkboxes</p>
+                    <div class="pure-u-1 pure-u-md-1-2" style="height: 70px; position: relative;">
+                        <div class="align-center">
+                            <div class="dropdown">
+                                <button class="dropdown-toggle drop-btn" type="button" id="dropdownMenu1"
+                                        data-toggle="dropdown">
+                                    Dropdown
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">Action</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">Another action</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">Something else here</a>
+                                    </li>
+                                    <li role="presentation" class="divider"></li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">Separated link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-2 chebox-ctn">
+                        <span class="check-wrap checkbox"><i class="fa fa-check-square-o"></i>Toggle Check</span>
+                    </div>
+                </div>
+                <div id="demo-responsive" class="pure-g anchor">
+                    <div class="pure-u-1 heading">
+                        <h3>Responsive Design With Twitter bootstrap and Zurb foundation</h3>
+                    </div>
+                </div>
+                <section class="pure-g responsive">
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <a href="http://getbootstrap.com/">
+                            <img class="pure-img-responsive" 
+                                 src="img/bootstrap.JPG" alt="Train">
+                        </a>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <a href="http://foundation.zurb.com/">
+                            <img class="pure-img-responsive" 
+                                 src="img/foundation.JPG" alt="Train">
+                        </a>
+                    </div>
+
+                </section>
+                <div id="demo-jstools" class="pure-g anchor">
+                    <div class="pure-u-1 heading">
+                        <h3>Use of latest and greatest application development tools on the web</h3>
+                    </div>
+                </div>
+                <div class="pure-g tools">
+                    <img class="pure-img-responsive" 
+                         src="img/tools.jpg" alt="Tools">
+                </div>
+                <div id="demo-content" class="pure-g anchor">
+                    <div class="pure-u-1 heading">
+                        <h3>Focus on content</h3>
+                    </div>
+                </div>
+                <div class="pure-g type">
+                    <div class="pure-u-1">
+                        Heading 1:<h1>Showers across the W</h1></div>
+                    <div class="pure-u-1">
+                        Heading 2:<h2>Give this quartet a few</h2></div>
+                    <div class="pure-u-1">
+                        Heading 3:<h3>The Vatican transitions to a</h3></div>
+                    <div class="pure-u-1">
+                        Heading 4:<h4>Great American Bites: Telluride's Oak, The</h4></div>
+                    <div class="pure-u-1">
+                        Heading 5:<h5>Author Diane Alberts loves her some good</h5></div>
+                    <div class="pure-u-1">
+                        Heading 6:<h6>With the success of young-adult book-to-movie</h6></div>
+                    <div class="pure-u-1">
+                        Paragraph: <p>
+                            Cum sociis natoque penatibus et magnis dis parturient montes,
+                            nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.
+                            Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+                            odio sem nec elit.
+                        </p>
+                    </div>
+                    <div class="pure-u-1">
+                        Blockquote:
+                        <blockquote>
+                            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus.</p>
+                            <small>Steve Jobs, CEO Apple</small>
+                        </blockquote>
+                        Small:
+                        <p>
+                            <small>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</small></p>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="lib/jquery-2.1.1.min.js"></script>
         <script src="lib/slider/js/simple-slider.min.js"></script>
+        <script src="lib/dropdown/dropdown.js"></script>
         <script src="lib/jquery.scrollTo.min.js"></script>
         <script src="lib/context_blender.js"></script>
         <script src="lib/pure/ui.js"></script>

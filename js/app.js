@@ -253,3 +253,60 @@ app.initpage = function() {
     app.createIndividualShapes();
 };
 $(document).ready(app.initpage);
+$('.dropdown-menu li').on('click', function(a, b, c) {
+    event.preventDefault();
+    console.log($(this).index());
+    $('.dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
+});
+$('.checkbox').on('click', function() {
+    $this = $(this).children('i');
+    if ($this.hasClass('fa-check-square-o')) {
+        $this.removeClass('fa-check-square-o').addClass('fa-square-o');
+    } else {
+        $this.removeClass('fa-square-o').addClass('fa-check-square-o');
+    }
+});
+$('.nav-left li').on('click', function() {
+    $('.pure-menu-selected').removeClass('pure-menu-selected');
+    $(this).addClass('pure-menu-selected');
+    var clicked = $(this).children('a').attr('href');
+    $(clicked).hide();
+    $(clicked).slideToggle();
+});
+$('.pure-menu-heading').on('click', function() {
+    $('.header').hide();
+    $('.header').slideToggle();
+});
+app.offsetArray = [];
+$.each($('.anchor'), function() {
+    app.offsetArray.push($(this).offset().top);
+});
+var lastScroll = 0;
+$(window).scroll(function(event) {
+    //Sets the current scroll position
+    var st = $(this).scrollTop();
+    //Determines up-or-down scrolling
+    console.log(app.offsetArray);
+    console.log(st);
+    if (st > lastScroll) {
+        var n = 0;
+        for (n = 0; n < app.offsetArray.length; n++) {
+            if (app.offsetArray[n] > st) {
+                console.log(n);
+                break;
+            }
+        }
+    }
+    else {
+        //Replace this with your function call for upward-scrolling
+        var n = 0;
+        for (n = app.offsetArray.length - 1; n >= 0; n--) {
+            if (st > app.offsetArray[n]) {
+                console.log(n);
+                break;
+            }
+        }
+    }
+    //Updates scroll position
+    lastScroll = st;
+});
