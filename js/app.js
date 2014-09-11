@@ -266,16 +266,54 @@ $('.checkbox').on('click', function() {
         $this.removeClass('fa-square-o').addClass('fa-check-square-o');
     }
 });
+function animationHover(element, animation) {
+    element = $(element);
+    element.hover(
+            function() {
+                element.addClass('animated ' + animation);
+            },
+            function() {
+                //wait for animation to finish before removing classes
+                window.setTimeout(function() {
+                    element.removeClass('animated ' + animation);
+                }, 2000);
+            }
+    );
+}
+;
+function animationClick(element, animation) {
+    element = $(element);
+    element.click(
+            function() {
+                element.addClass('animated ' + animation);
+                //wait for animation to finish before removing classes
+                window.setTimeout(function() {
+                    element.removeClass('animated ' + animation);
+                }, 2000);
+            }
+    );
+}
+;
+animationClick('#form-demo', 'fadeInLeft');
+$('.header').on('click', function() {
+    animationClick('.header', 'fadeInLeft');
+});
 $('.nav-left li').on('click', function() {
+    $('.anchor').waypoint('disable');
     $('.pure-menu-selected').removeClass('pure-menu-selected');
     $(this).addClass('pure-menu-selected');
     var clicked = $(this).children('a').attr('href');
-    $(clicked).hide();
-    $(clicked).slideToggle();
+    $(clicked).addClass('animated ' + 'fadeInLeft');
+    window.setTimeout(function() {
+        $(clicked).removeClass('animated ' + 'fadeInLeft');
+        $('.anchor').waypoint('enable');
+    }, 2000);
 });
 $('.pure-menu-heading').on('click', function() {
-    $('.header').hide();
-    $('.header').slideToggle();
+    $('.header').addClass('animated ' + 'fadeInDown');
+    window.setTimeout(function() {
+        $('.header').removeClass('animated ' + 'fadeInDown');
+    }, 2000);
 });
 app.offsetArray = [];
 $.each($('.anchor'), function() {
@@ -286,13 +324,10 @@ $(window).scroll(function(event) {
     //Sets the current scroll position
     var st = $(this).scrollTop();
     //Determines up-or-down scrolling
-    console.log(app.offsetArray);
-    console.log(st);
     if (st > lastScroll) {
         var n = 0;
         for (n = 0; n < app.offsetArray.length; n++) {
             if (app.offsetArray[n] > st) {
-                console.log(n);
                 break;
             }
         }
@@ -302,7 +337,6 @@ $(window).scroll(function(event) {
         var n = 0;
         for (n = app.offsetArray.length - 1; n >= 0; n--) {
             if (st > app.offsetArray[n]) {
-                console.log(n);
                 break;
             }
         }
@@ -310,3 +344,12 @@ $(window).scroll(function(event) {
     //Updates scroll position
     lastScroll = st;
 });
+$('.anchor').waypoint(function() {
+    var linkArr = [];
+    $.each($('ul.nav-left a'), function() {
+        linkArr.push($(this).attr('href'));
+    });
+    $('.pure-menu-selected').removeClass('pure-menu-selected');
+    var id = '#' + $(this).attr('id');
+    $('ul.nav-left li').eq(linkArr.indexOf(id)).addClass('pure-menu-selected');
+}, {offset: 0});

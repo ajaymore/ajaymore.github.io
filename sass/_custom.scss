@@ -20,6 +20,7 @@ html, button, input, select, textarea,
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     padding: 0;
+    margin-bottom: 40px;
     li{
         display: inline-block;
     }    
@@ -40,7 +41,7 @@ html, button, input, select, textarea,
     p{
         text-align: right;
         background: rgba(#2ECC71, 0.40);
-        padding: 5px 20px;
+        padding: 15px 20px;
         margin-top: 0;
     }
 }
@@ -48,7 +49,7 @@ html, button, input, select, textarea,
     p{
         text-align: left;
         background: rgba(#2ECC71, 0.40);
-        padding: 5px 20px;
+        padding: 15px 20px;
         margin-top: 0;
     }
 }
@@ -64,6 +65,7 @@ html, button, input, select, textarea,
         font-size: 1.4em;
         font-weight: 700;
         color: #34495E;
+        margin: 40px 0;
         text-shadow: 0px -1px 0px rgba(52, 73, 94, 1);
     }
 }
@@ -77,6 +79,7 @@ html, button, input, select, textarea,
         font-size: 1.4em;
         font-weight: 700;
         color: #34495E;
+        margin: 40px 0;
         text-shadow: 0px -1px 0px rgba(52, 73, 94, 1);
     }
     div{
@@ -238,7 +241,7 @@ button{
 }
 /* inputs end */
 .heading h3{
-    display: inline-block;
+    /*display: inline-block;*/
     padding: 1em 4em 1em 1em;
     margin: 0;
     background: #FF4B33;
@@ -250,6 +253,7 @@ button{
         font-size: 1.4em;
         font-weight: 700;
         color: #34495E;
+        margin: 40px 0;
         text-shadow: 0px -1px 0px rgba(52, 73, 94, 1);
     }
 }
@@ -280,7 +284,7 @@ button{
     background: #e0ebe8;
     a{
         display: block;
-        padding: 35px 20px;
+        padding: 60px 20px 80px 20px;
         border: 4px;
         box-sizing: border-box;
     }
@@ -295,4 +299,26 @@ button{
 }
 .type{
     padding: 20px 20px 20px 50px;
+    .pure-u-1{
+        margin-bottom: 20px;
+    }
+}
+div#demo-responsive {
+    margin-top: 40px;
+}
+div#demo-content {
+    margin-top: 40px;
+}
+.templates{
+    background: rgba(46, 204, 113, 0.4);
+    padding-top: 40px;
+    img{
+        display: block;
+        margin: 0 auto;
+        padding: 0 20px 0;
+        box-sizing: border-box;
+    }
+}
+.templates-last{
+    padding-bottom: 40px
 }
