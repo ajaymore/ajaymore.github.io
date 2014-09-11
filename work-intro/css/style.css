@@ -880,3 +880,8 @@ div#demo-content {
 .templates-last {
   padding-bottom: 40px;
 }
+
+/* line 325, ../sass/_custom.scss */
+.horizontal-scroll {
+  padding: 0 20px;
+}
