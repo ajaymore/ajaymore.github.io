@@ -1,0 +1,26 @@
+<div ng-show="createForm">
+    <div>
+        <material-button class="material-button-fab material-theme-green round-button" ng-click="create()">
+            <material-icon icon="img/icons/check.svg" style="width: 24px; height: 24px;"></material-icon>
+        </material-button>
+    </div>
+    <div class="inputs">
+        <input type="text" ng-model="title" ng-show="inputPlaceholderVal" placeholder="{{inputPlaceholderVal}}">
+        <textarea ng-model="description" placeholder="{{textPlaceholderVal}}"
+                  rows="3" ></textarea>
+    </div>
+</div>
+
+<div ng-show="editForm">
+    <div>
+        <material-button class="material-button-fab material-theme-green round-button" ng-click="modify()">
+            <material-icon icon="img/icons/check.svg" style="width: 24px; height: 24px;"></material-icon>
+        </material-button>
+    </div>
+    <div class="inputs">
+        <input type="text" ng-model="title" ng-show="title" placeholder="{{inputPlaceholderVal}}"
+               auto-focus>
+        <textarea ng-model="description" placeholder="{{textPlaceholderVal}}"
+                  rows="3"></textarea>
+    </div>
+</div>
