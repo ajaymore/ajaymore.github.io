@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Demo Page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="wrapper">
             <h2>Sample Form</h2>
-            <form action="#">
-                <input name="text" type="text" placeholder="Enter name" />
-                <input name="password" type="password" placeholder="Enter password" />
+            <form class="form">
+                <input name="username" type="text" placeholder="Enter username" />
+                <input name="password" type="password" class="pswd" placeholder="Enter password" />
                 <button id="submitBtn">Submit</button>
             </form>
+            <a href="https://google.com">Link to google</a>
         </div>
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            $('#submitBtn').on('click', function () {
+                $('h2').text('Form is submitted');
+            });
+        </script>
     </body>
 </html>
