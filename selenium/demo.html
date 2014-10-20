@@ -18,7 +18,8 @@
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script>
             $('#submitBtn').on('click', function () {
-                $('h2').text('Form is submitted');
+                event.preventDefault();
+                $('h2').html('Form is submitted');
             });
         </script>
     </body>
