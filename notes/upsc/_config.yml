@@ -1,0 +1,9 @@
+# Site settings
+url: "http://ajaymore.net" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+highlighter: true
+markdown: kramdown
+permalink: /:title
+relative_permalinks: true
