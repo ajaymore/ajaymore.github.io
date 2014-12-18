@@ -1,62 +1,70 @@
+<!DOCTYPE html>
+<html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Notes App</title>
-    <meta name="description" content="Notes by Ajay More: http://ajaymore.net">
+    <link rel="stylesheet" href="assets/libs/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="canonical" href="http://ajaymore.net/notes">
     <link href='http://fonts.googleapis.com/css?family=Lato:300italic' rel='stylesheet' type='text/css'>
-    <script src="assets/angular.min.js"></script>
-    <script src="assets/zepto.min.js"></script>
-    <script src="assets/zepto-touch.js"></script>
 </head>
-<body ng-app="myApp">
-    <div ng-show="showLoading" class="loading">Please<br/>Wait...</div>
-    <div class="mobile-content" ng-controller="MobileCtrl">
-        <nav>
-            <div class="back-btn" ng-click="backClicked()" ng-show="showBackBtn">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjczQjYyRDU2NTY3MTFFNEE1MThENjkxOTY4RkRFRkEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjczQjYyRDY2NTY3MTFFNEE1MThENjkxOTY4RkRFRkEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2NzNCNjJEMzY1NjcxMUU0QTUxOEQ2OTE5NjhGREVGQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2NzNCNjJENDY1NjcxMUU0QTUxOEQ2OTE5NjhGREVGQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrOIbbIAABAQSURBVHja7NtLslRJ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"/>
-            </div>
-            <span class="title">{{title}}</span>
-        </nav>
-        <div class="subjectList blocks" ng-show="showSubjects">
-            <ul class="simple-list">
-                <li ng-repeat="subject in subjects" ng-click="subjectClicked(subject)">{{subject}}</li>
-            </ul>
-        </div>
-        <div class="Chapters blocks" ng-show="showChapters">
-            <ul class="simple-list">
-                <li ng-repeat="chapter in chapters" ng-click="chapterClicked(chapter)">{{chapter}}</li>
-            </ul>
-        </div>
-        <div class="note blocks" ng-show="showNote">
-            <div class="include" ng-include="template.url" onload="createLinks()"></div>
-        </div>
 
+<body ng-app="myApp">
+    <!--   hide-gt-md  -->
+    <div ng-controller="AppCtrl" layout="column" layout-fill>
+        <md-content>
+            <md-toolbar layout="row">
+                <div class="drawer-open" layout="column" layout-align="center start" hide-gt-md>
+
+                    <div ng-click="toggleLeft()" class="icon-padding">
+                        <img src="assets/menu.png" alt="open-drawer" />
+                    </div>
+                </div>
+                <h2 class="md-toolbar-tools" layout-align="center">
+                    <span class="title-text">{{titleText}}</span>
+                </h2>
+            </md-toolbar>
+        </md-content>
+        <section layout="row" flex>
+            <md-sidenav class="md-sidenav-left md-whiteframe-z2 back-parent" md-component-id="left" md-is-locked-open="$media('gt-md')">
+                <md-toolbar hide-gt-md>
+                    <h2 class="md-toolbar-tools" layout-align="center">
+                    <span class="title-text">{{titleText}}</span>
+                    </h2>
+                </md-toolbar>
+                <md-button class="md-fab md-primary back-hover" md-theme="default" aria-label="Show Subjects" ng-click="backBtnPress()" ng-show="showBackBtn">
+                    <md-icon icon="assets/ic_arrow_left.svg" style="width: 32px; height: 32px;"></md-icon>
+                </md-button>
+                <md-content class="md-padding list" set-css>
+                    <md-list>
+                        <md-item ng-repeat="item in subChaptList">
+                            <md-item-content>
+                                <div class="md-tile-content">
+                                    <h3 ng-click="itemClicked(item)">{{item}}</h3>
+                                </div>
+                            </md-item-content>
+                            <md-divider ng-if="!$last"></md-divider>
+                        </md-item>
+                    </md-list>
+                </md-content>
+            </md-sidenav>
+            <md-content flex class="md-padding">
+                <div class="" ng-include="template.url" onload="createLinks()"></div>
+            </md-content>
+        </section>
     </div>
-    <div class="desktop-content clearfix" ng-controller="DesktopCtrl">
-        <nav>
-            <div class="back-btn" ng-click="backClicked()" ng-show="showBackBtn">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjczQjYyRDU2NTY3MTFFNEE1MThENjkxOTY4RkRFRkEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjczQjYyRDY2NTY3MTFFNEE1MThENjkxOTY4RkRFRkEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2NzNCNjJEMzY1NjcxMUU0QTUxOEQ2OTE5NjhGREVGQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2NzNCNjJENDY1NjcxMUU0QTUxOEQ2OTE5NjhGREVGQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrOIbbIAABAQSURBVHja7NtLslRJ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"/>
-            </div>
-            <span class="title">{{title}}</span>
-        </nav>
-        <div class="subjectList desk-left blocks" ng-show="showSubjects">
-            <ul class="simple-list">
-                <li ng-repeat="subject in subjects" ng-click="subjectClicked(subject)">{{subject}}</li>
-            </ul>
-        </div>
-        <div class="Chapters desk-left blocks" ng-show="showChapters">
-            <ul class="simple-list">
-                <li ng-repeat="chapter in chapters" ng-click="chapterClicked(chapter)">{{chapter}}</li>
-            </ul>
-        </div>
-        <div class="note desk-right blocks" ng-show="showNote">
-            <div class="include desk-note" ng-include="template.url" onload="createLinks()"></div>
-        </div>
-    </div>        
-    <script src="assets/angular-animate.min.js"></script>
+    <!-- Angular Material Dependencies -->
+    <script src="assets/libs/hammerjs/hammer.min.js"></script>
+    <script src="assets/libs/angular/angular.min.js"></script>
+    <script src="assets/libs/angular-animate/angular-animate.min.js"></script>
+    <script src="assets/libs/angular-aria/angular-aria.min.js"></script>
+
+    <!-- Angular Material Javascript now available via Google CDN; version 0.6 used here -->
+    <script src="assets/libs/angular-material/angular-material.min.js"></script>
     <script src="assets/app.js"></script>
 </body>
+
+</html>
