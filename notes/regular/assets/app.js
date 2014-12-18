@@ -6,13 +6,45 @@ var showHide = function ($scope, showArr, hideArr) {
         $scope[showArr[i]] = true;
     }
 };
+var createLinks = function ($scope) {
+    var log = angular.element(document.querySelectorAll('li'));
+    angular.forEach(log, function (value, key) {
+        value = angular.element(value);
+        var url = value.text();
+        if (url.indexOf('http://') === 0 || url.indexOf('https://') === 0) {
+            var liElem = angular.element('<li />');
+            var anchorElem = angular.element('<a />');
+            anchorElem.text(url).attr('href', url).attr('target', '_blank');
+            liElem.append(anchorElem);
+            value.replaceWith(liElem);
+        }
+    });
+};
+
+function smoothScroll(el, to, duration) {
+    if (duration < 0) {
+        return;
+    }
+    var difference = to - $(window).scrollTop();
+    var perTick = difference / duration * 10;
+    this.scrollToTimerCache = setTimeout(function () {
+        if (!isNaN(parseInt(perTick, 10))) {
+            window.scrollTo(0, $(window).scrollTop() + perTick);
+            smoothScroll(el, to, duration - 10);
+        }
+    }.bind(this), 10);
+}
 angular.module('myApp', ['ngMaterial'])
-    .directive("setCss", function () {
+    .directive("scrollOnClick", function () {
         return {
             restrict: "A",
             link: function (scope, element) {
-                element.css({
-                    'overflow': 'auto'
+                element.on('dblclick', function () {
+                    smoothScroll(angular.element(window), 0, 300);
+                });
+                var hammertime = new Hammer(element[0], {});
+                hammertime.on('doubletap', function (ev) {
+                    smoothScroll(angular.element(window), 0, 300);
                 });
             }
         };
@@ -65,6 +97,10 @@ angular.module('myApp', ['ngMaterial'])
             showHide($scope, [], ['showBackBtn']);
             currentSubject = undefined;
             $scope.subChaptList = $scope.subjects;
-        }
+        };
+
+        $scope.createLinks = function () {
+            createLinks($scope);
+        };
 
     });
