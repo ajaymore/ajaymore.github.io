@@ -1,0 +1,12 @@
+---
+---
+- create empty file with routines.db
+- .open routines.db
+- .databases
+- .tables
+- .schema tablename
+- create table routineRows(task_id TEXT PRIMARY KEY, complete INTEGER, title INTEGER);
+- insert into routineRows values ('1234', 0, 1);
+- select * from routineRows;
+- SELECT * FROM routineRows WHERE task_id IN ('1234','12345', '12365');
+- DELETE FROM routineRows WHERE task_id NOT IN ('1234','12345', '12365');

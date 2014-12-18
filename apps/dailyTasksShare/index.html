@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task sharing | Daily Tasks</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<link rel="canonical" href="http://ajaymore.net/apps/dailyTasksShare">-->
+    </head>
+    <body>
+        <h1>Daily Tasks App</h1>
+        <script>
+            function replaceAll(find, replace, str) {
+                return str.replace(new RegExp(find, 'g'), replace);
+            }
+            window.onload = function () {
+                var url = document.documentURI;
+                console.log(url);
+                url = replaceAll('sep12sep', '"', url);
+                url = decodeURIComponent(url);
+                url = url.substr('http://ajaymore.net/apps/dailyTasksShare/index.html?json='.length);
+//                url = url.substr('http://localhost:8383/apps/dailyTasksShare/index.html?json='.length);
+                console.log(JSON.parse(url));
+            };
+
+        </script>
+    </body>
+</html>

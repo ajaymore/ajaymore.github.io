@@ -1,0 +1,139 @@
+@import "normalize";
+@import "animate";
+.anime-cell.ng-enter{
+    -webkit-animation: fadeInLeft 1s;
+    -moz-animation: fadeInLeft 1s;
+    -ms-animation: fadeInLeft 1s;
+    animation: fadeInLeft 1s;
+}
+$left-padding-offset: 20px;
+$image-size: 32px;
+body{
+    background: #212121;
+}
+.tableWrap{
+    background: #fff;
+    padding-bottom: 20px;
+}
+table{
+    margin: 0 auto;
+}
+.code{
+    padding: 20px;
+}
+.ttable, .ttrow, .ttbody, .ttds{
+    display: block;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.ttable{
+    color: #B71C1C;
+}
+.ttbody{
+    padding-left: $left-padding-offset * 1;
+    color: #4DB6AC;
+}
+.ttrow{
+    padding-left: $left-padding-offset * 2;
+    color: #7986CB;
+}
+.ttds{
+    padding-left: $left-padding-offset * 3;
+    color: #E65100;
+    .cell{
+        color: #fff; 
+    }
+}
+.remove{
+    background-image: url(../assets/remove.png);
+    height: $image-size; 
+    width: $image-size; 
+    background-repeat: no-repeat;
+    background-size: $image-size $image-size;
+    background-position: 50%;
+}
+input{
+    border: none;
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    &:focus{
+        border-bottom: 2px solid #03a9f4;
+        outline: none;
+    }
+}
+.pure-button{
+    width: 150px;
+}
+.btnCtn{
+    padding: 20px 0;
+    padding-bottom: 40px;
+    text-align: center;
+    background: #fff;
+}
+/*!
+Pure v0.5.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yui/pure/blob/master/LICENSE.md
+*/
+.pure-button {
+    /* Structure */
+    display: inline-block;
+    *display: inline; /*IE 6/7*/
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.pure-button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+/*csslint outline-none:false*/
+
+.pure-button {
+    font-family: inherit;
+    font-size: 100%;
+    *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
+    *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+    padding: 0.5em 1em;
+    color: #444; /* rgba not supported (IE 8) */
+    color: rgba(0, 0, 0, 0.80); /* rgba supported */
+    *color: #444; /* IE 6 & 7 */
+    border: 1px solid #999;  /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+    background-color: #E6E6E6;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.pure-button-hover,
+.pure-button:hover,
+.pure-button:focus {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.10));
+    background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.pure-button:focus {
+    outline: 0;
+}
+.pure-button-active,
+.pure-button:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+}

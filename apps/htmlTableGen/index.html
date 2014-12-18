@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>Html table generator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="assets/jquery-2.1.1.min.js" ></script>
+        <script src="assets/angular.min.js" ></script>
+        <link rel="stylesheet" href="assets/style.css" />
+        <link rel="canonical" href="http://ajaymore.net/apps/htmlTableGen">
+    </head>
+    <body ng-controller="AppCtrl">
+        <!-- Float add icons, x icons to each column, row-->
+        <div class="tableWrap">
+            <table>
+                <tbody>
+                    <tr class="anime-row">
+                        <th ng-repeat="title in titles track by $index" class="anime-cell">
+                            <input type="text" ng-model="title.text" placeholder="Title"/>
+                        </th>
+                    </tr>
+                    <tr ng-repeat="row in rows track by $index" class="anime-row">
+                        <td ng-repeat="item in row track by $index" class="anime-cell">
+                            <input type="text" ng-model="item.text" placeholder="Value"/>
+                        </td>
+                        <td ng-show="rowPresent" class="remove anime-cell"
+                            ng-click="deleteRow($index)"></td>
+                    </tr>
+                    <tr class="anime-row">
+                        <td ng-show="columnPresent" class="remove anime-cell"
+                            ng-repeat="row in rows[0]" ng-click="deleteCol($index)"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btnCtn">
+            <button ng-click="addColumn()" class="pure-button">Add Column</button>
+            <button ng-click="addRow()" class="pure-button">Add row</button>
+        </div>
+        <div class="code">
+            <span class="ttable">&lt;table&gt;</span>
+            <span class="ttbody">&lt;tbody&gt;</span>
+            <span class="ttrow">&lt;tr&gt;</span>
+            <span class="ttds">
+                <span ng-repeat="title in titles track by $index">
+                    &lt;th&gt;{{title.text}}&lt;/th&gt;
+                </span>                
+            </span>
+            <span class="ttrow">&lt;/tr&gt;</span>
+            <span ng-repeat="row in rows track by $index">
+                <span class="ttrow">&lt;tr&gt;</span>
+                <span class="ttds">
+                    <span ng-repeat="item in row track by $index" class="cell">
+                        &lt;td&gt;{{item.text}}&lt;/td&gt;
+                    </span>             
+                </span>                    
+                <span class="ttrow">&lt;/tr&gt;</span>
+            </span>
+            <span class="ttbody">&lt;/tbody&gt;</span>
+            <span class="ttable">&lt;/table&gt;</span>
+        </div>
+        <script src="assets/angular-animate.min.js" ></script>
+        <script src="assets/app.js" ></script>
+    </body>
+</html>
