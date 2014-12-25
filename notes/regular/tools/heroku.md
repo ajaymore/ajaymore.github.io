@@ -22,6 +22,8 @@ heroku config:set GITHUB_USERNAME=joesmith
 heroku config
 heroku config:get GITHUB_USERNAME
 heroku config:unset GITHUB_USERNAME
+
+composer update --ignore-platform-reqs
 </pre>
 
 - oauth create app with https://developers.facebook.com/apps

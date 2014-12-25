@@ -61,3 +61,18 @@ PROJECTION
 db.mycol.find({},{"title":1,_id:0})
 db.mycol.remove({})
 </pre>
+
+<pre>
+$cursor = $posts->find()->limit(1);
+	$row = $cursor->getNext();
+	echo $row['_id'];
+	echo $row['title'];
+	echo $row['content'];
+	echo date('Y-m-d H:i:s', $row['saved_at']->sec);
+	foreach ($cursor as $document) {
+	    echo '<pre>' . json_encode($document) . '</pre>';
+	    echo "\n";
+	}
+
+{"text" : "Code is poetry", "author" => "Anonymous", "ctg_id" => "12345"}
+</pre>

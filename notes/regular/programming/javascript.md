@@ -273,3 +273,5 @@ Triangle.prototype.getArea = function () {
 - constructor
 - isPrototypeOf
 - prototype
+
+pos = myArray.map(function(e) { return e.hello; }).indexOf('stevie');
