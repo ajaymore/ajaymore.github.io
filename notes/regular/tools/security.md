@@ -3,7 +3,9 @@
 
 # Core principles
 1. List previlege
-> Every program and every previleged user of the system should operate using the least amount of previlege necessary to complete the job.
+
+>Every program and every previleged user of the system should operate using the least amount of previlege necessary to complete the job.
+
 2. Simple is more secure: Do not keep any code available which won't be used.
 3. Never trust users
 4. Expect the unexpected: (Edge cases)
