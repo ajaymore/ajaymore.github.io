@@ -4,6 +4,7 @@
 
 ###Global config
 git config --global user.email ajmore.biz@gmail.com
+git config --global user.name "Your Name"
 
 ###Commit all files if added already
 git commit -a -m 'My commit comments'
