@@ -1,6 +1,12 @@
 ---
 ---
 
+<pre>
+	C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Dell\DW WLAN Card;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;%JAVA_HOME%\bin;%ANT_HOME%\bin;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\git\cmd;C:\Program Files\nodejs\;C:\Ruby200-x64\bin;C:\Python34;C:\Python34\Scripts;C:\wamp\bin\php\php5.5.12;C:\wamp\bin\mysql\mysql5.6.17\bin;
+</pre>
+
+python -m SimpleHTTPServer
+
 - Every variable in python is an object
 - String are immutable
 - for, List are iterables
