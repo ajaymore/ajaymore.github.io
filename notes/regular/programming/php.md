@@ -8,12 +8,12 @@ Enable apache rewrite_module
 2. update httpd.conf file
 	- uncomment Include conf/extra/httpd-vhosts.conf
 3. Go to "C:/wamp/bin/apache/Apache2.2.21/conf/extra" and open the file "httpd.vhosts.conf".
-4. update one of the entries as per your need
+4. update one of the entries as per your need, note that project should be in www folder
 
 <pre>
 <VirtualHost *:80>
     ServerAdmin webmaster@dummy-host.example.com
-    DocumentRoot "C:/wamp/www/playground"
+    DocumentRoot "C:/wamp/www/playground/public"
     ServerName mystical.com
     ServerAlias mystical.com
     ErrorLog "logs/dummy-host.example.com-error.log"

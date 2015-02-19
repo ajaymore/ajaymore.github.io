@@ -29,7 +29,16 @@ composer update --ignore-platform-reqs
 - oauth create app with https://developers.facebook.com/apps
 - https://code.google.com/apis/console/
 - enable google plus api
+- do not use @ in mongodb passwords
 
 angular.module('myApp', []).config(function($interpolateProvider){
     $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
 });
+
+- heroku addons:add heroku-postgresql:dev
+- heroku config | grep HEROKU_POSTGRESQL
+
+php artisan migrate:make create_punk_table
+php artisan migrate
+
+windows sublime text menu : https://gist.github.com/jcppkkk/8330314/download#

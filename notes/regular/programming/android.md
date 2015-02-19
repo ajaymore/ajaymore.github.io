@@ -8,9 +8,13 @@ Install Android studio
 Set path variables (tools and platform-tools)
 adb shell pm set-install-location 2
 
-
+###to enable move to SD card on xolo q800
+- adb shell pm set-install-location 2 (Android 4.x)
+- adb shell pm get-install-location (Android 4.x)
 
 ##Android Studio :
+
+- Install intel Harware Accelerated Execution Manager
 
 - Ctrl + w -> incremental selection
 - Ctrl + alt + v -> refactor
