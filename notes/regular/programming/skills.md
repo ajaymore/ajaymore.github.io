@@ -6,7 +6,8 @@
 - Algorithms and datastructures
 - object oriented programming
 - functional programming
-- Languages: Java, JavaScript, PHP, Python
+- Design patterns
+- Languages: JavaScript, Python
 
 #Server
 - Authentication
@@ -15,7 +16,7 @@
 - SQL, NoSQL
 - Files, Emails
 - middlewares, templating engines, error handling, logging, security, testing, continuous integration
-- Frameworks: Laravel, express, flask
+- Frameworks: express, flask
 
 #Client
 - Login (Social, normal)
@@ -42,6 +43,7 @@
 	- UnderScore
 	- HTML5 Boilerplate
 	- impressJS
+	- Rachet
 
 ##UX
 - 7 principles of design
