@@ -4,7 +4,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position-y: 60px;
 }
 
 .social-icons {
@@ -14,10 +13,13 @@ body {
     opacity: 0.9;
 }
 
-.brand-logo img{
+.brand-logo img {
+    height: 50px;
+    vertical-align: middle;
+}
 
-  height: 50px;
-  vertical-align: middle;
+.button-collapse {
+    padding: 0 10px;
 }
 
 .social-icons li {
@@ -32,10 +34,6 @@ nav {
 nav ul li:hover,
 nav ul li.active {
     background-color: #004d40;
-}
-
-nav .brand-logo {
-    padding-left: 20px;
 }
 
 nav ul {
@@ -78,4 +76,15 @@ nav ul a {
     h1 {
         font-size: 6rem;
     }
+    nav .brand-logo {
+        padding-left: 20px;
+    }
+}
+
+.footer-copyright {
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(51, 51, 51, 0.08);
 }
