@@ -1,0 +1,81 @@
+body {
+    background: url(img/body_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position-y: 60px;
+}
+
+.social-icons {
+    margin: 0;
+    text-align: center;
+    padding: 10px 60px;
+    opacity: 0.9;
+}
+
+.brand-logo img{
+
+  height: 50px;
+  vertical-align: middle;
+}
+
+.social-icons li {
+    display: inline-block;
+    padding: 0 2px;
+}
+
+nav {
+    box-shadow: none;
+}
+
+nav ul li:hover,
+nav ul li.active {
+    background-color: #004d40;
+}
+
+nav .brand-logo {
+    padding-left: 20px;
+}
+
+nav ul {
+    margin-right: 20px;
+}
+
+nav ul a {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.social-ctn {
+    margin-bottom: 0;
+}
+
+.hero {
+    padding: 20px;
+}
+
+.hero h1 {
+    color: #039be5;
+    text-align: center;
+    font-weight: 300;
+    line-height: inherit;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.hero p {
+    text-align: center;
+    font-size: 2em;
+}
+
+@media only screen and (min-width: 360px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    h1 {
+        font-size: 6rem;
+    }
+}
