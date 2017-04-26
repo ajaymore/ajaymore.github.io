@@ -172,9 +172,9 @@
 		jQuery(document).ready(function () {
 			$('.contact-form form').submit(function () {
 
-				$('.contact-form form #name').html('');
-				$('.contact-form form #email').html('');
-				$('.contact-form form #message').html('');
+				$('.contact-form form #name').val('');
+				$('.contact-form form #email').val('');
+				$('.contact-form form #message').val('');
 
 				var postdata = $('.contact-form form').serialize();
 				console.log(postdata);
