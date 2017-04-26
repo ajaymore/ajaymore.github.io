@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Notes App</title>
+    <link rel="stylesheet" href="assets/libs/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-app="myApp" scroll-on-click>
+    <!--   hide-gt-md  -->
+    <div ng-controller="AppCtrl" layout="column" layout-fill>
+        <md-content>
+            <md-toolbar layout="row">
+                <div class="drawer-open" layout="column" layout-align="center start" hide-gt-md>
+
+                    <div ng-click="toggleLeft()" class="icon-padding">
+                        <img src="assets/menu.png" alt="open-drawer" />
+                    </div>
+                </div>
+                <h2 class="md-toolbar-tools" layout-align="center">
+                    <span class="title-text">{{titleText}}</span>
+                </h2>
+            </md-toolbar>
+        </md-content>
+        <section layout="row" flex>
+            <md-sidenav class="md-sidenav-left md-whiteframe-z2 back-parent" md-component-id="left" md-is-locked-open="$media('gt-md')">
+                <md-toolbar hide-gt-md>
+                    <h2 class="md-toolbar-tools" layout-align="center">
+                    <span class="title-text">{{titleText}}</span>
+                    </h2>
+                </md-toolbar>
+                <md-button class="md-fab md-primary back-hover" md-theme="default" aria-label="Show Subjects" ng-click="backBtnPress()" ng-show="showBackBtn">
+                    <md-icon icon="assets/ic_arrow_left.svg" style="width: 32px; height: 32px;"></md-icon>
+                </md-button>
+                <md-content class="md-padding list" set-css>
+                    <md-list>
+                        <md-item ng-repeat="item in subChaptList">
+                            <md-item-content>
+                                <div class="md-tile-content">
+                                    <h3 ng-click="itemClicked(item)">{{item}}</h3>
+                                </div>
+                            </md-item-content>
+                            <md-divider ng-if="!$last"></md-divider>
+                        </md-item>
+                    </md-list>
+                </md-content>
+            </md-sidenav>
+            <md-content flex class="md-padding">
+                <div class="" ng-include="template.url" onload="createLinks()"></div>
+            </md-content>
+        </section>
+    </div>
+    <!-- Angular Material Dependencies -->
+    <script src="assets/libs/zepto.min.js"></script>
+    <script src="assets/libs/hammerjs/hammer.min.js"></script>
+    <script src="assets/libs/angular/angular.min.js"></script>
+    <script src="assets/libs/angular-animate/angular-animate.min.js"></script>
+    <script src="assets/libs/angular-aria/angular-aria.min.js"></script>
+
+    <!-- Angular Material Javascript now available via Google CDN; version 0.6 used here -->
+    <script src="assets/libs/angular-material/angular-material.min.js"></script>
+    <script src="assets/app.js"></script>
+</body>
+
+</html>

@@ -1,4 +1,0 @@
-Apps
-====
-
-My Apps
