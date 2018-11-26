@@ -1,0 +1,32 @@
+{
+  "docs": {
+    "Categories": [
+      "packages/server",
+      "packages/web",
+      "packages/mobile",
+      "packages/desktop"
+    ]
+  },
+  "linux": {
+    "Categories": ["linux/shell", "linux/docker"],
+    "Databases": ["linux/mysql", "linux/mongodb"],
+    "Tools": ["linux/shaka-packager", "linux/jenkins"],
+    "AWS": ["linux/aws-lambda", "linux/aws-s3"],
+    "Hacking": ["linux/hacking"]
+  },
+  "dev": {
+    "Front End": [
+      "dev/react",
+      {
+        "type": "subcategory",
+        "label": "React Native",
+        "ids": ["dev/rnative", "dev/rnative-ios", "dev/rnative-android"]
+      },
+      "dev/react-native",
+      "dev/electron"
+    ],
+    "Back End": ["dev/nextjs", "dev/express"],
+    "Machine Learning": ["dev/machine-learning"],
+    "Editors": ["dev/vscode", "dev/xcode", "dev/android-studio"]
+  }
+}
