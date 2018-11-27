@@ -7,6 +7,12 @@
 
 const React = require('react');
 
+let redirectTemplate = `<script>
+    var host = 'ajaymore.github.io';
+    if (host == window.location.host && window.location.protocol != 'https:')
+    window.location.protocol = 'https';
+</script>`;
+
 class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
@@ -82,6 +88,7 @@ class Footer extends React.Component {
           />
         </a>
         <section className="copyright">{this.props.config.copyright}</section>
+        <div dangerouslySetInnerHTML={{ __html: resultsTemplate }} />
       </footer>
     );
   }
