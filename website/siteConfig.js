@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Ajay', // Title for your website.
+  title: '', // Title for your website.
   tagline: 'My programming documentation',
   url: 'https://ajaymore.github.io', // Your website URL
   baseUrl: '/', // Base URL for your project */
@@ -36,6 +36,12 @@ const siteConfig = {
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
+  algolia: {
+    apiKey: '9cc4ebe11550c80337e89fe47ec30bb2',
+    indexName: 'ajaymore',
+    algoliaOptions: {} // Optional, if provided by Algolia
+  },
+
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     { doc: 'packages/server', label: 'NodeJS' },
@@ -45,9 +51,9 @@ const siteConfig = {
     { doc: 'dev/react', label: 'Ai' },
     { doc: 'dev/react', label: 'Animation' },
     { doc: 'dev/react', label: 'Code' },
-    { doc: 'dev/react', label: 'Philosophy' },
-    { doc: 'dev/react', label: 'IoT' },
-    { doc: 'dev/react', label: 'Projects' },
+    // { doc: 'dev/react', label: 'Philosophy' },
+    // { doc: 'dev/react', label: 'IoT' },
+    // { doc: 'dev/react', label: 'Projects' },
     { search: true }
   ],
 
@@ -61,8 +67,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#2E8555',
-    secondaryColor: '#205C3B'
+    primaryColor: '#00BCD4',
+    secondaryColor: '#FDD835'
   },
 
   /* Custom fonts for website */
