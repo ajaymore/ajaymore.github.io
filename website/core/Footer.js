@@ -88,7 +88,7 @@ class Footer extends React.Component {
           />
         </a>
         <section className="copyright">{this.props.config.copyright}</section>
-        <div dangerouslySetInnerHTML={{ __html: resultsTemplate }} />
+        <div dangerouslySetInnerHTML={{ __html: redirectTemplate }} />
       </footer>
     );
   }
