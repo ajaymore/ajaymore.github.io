@@ -99,8 +99,8 @@ docker run --rm --link mongo-container:mongo -v $HOME/mongo-backup:/backup mongo
  bash -c 'mongodump --out /backup --host mongo:27017'
 
 # restore by admin
-docker run --rm --link mongo-container:mongo -v $HOME/mongo-backup:/backup mongo \
- bash -c 'mongorestore /backup --host mongo:27017'
+docker run --rm --link mongo-container:mongo --net reverse-proxy -v $HOME/mongo-backup/cmcaindia:/backup/cmcaindia mongo \
+ bash -c 'mongorestore --db cmca-dev -u mongoadmin -p secret --authenticationDatabase admin /backup/cmcaindia --host mongo:27017'
 
 # backup by user
 docker run --rm --link mongo-container:mongo -v $HOME/mongo-backup:/backup mongo \
