@@ -138,10 +138,14 @@ docker run -d <span class="hljs-string">\</span>
 <pre><code class="hljs">scp -i <span class="hljs-regexp">~/.ssh/</span>id_rsa -r user<span class="hljs-meta">@your</span>.server.example.<span class="hljs-string">com:</span><span class="hljs-regexp">/path/</span>to<span class="hljs-regexp">/foo /</span>home<span class="hljs-regexp">/user/</span>Desktop/
 
 </code></pre>
-<pre><code class="hljs">docker <span class="hljs-builtin-name">run</span> --name mongo-container -v <span class="hljs-variable">$HOME</span>/mongo-data:/data/db <span class="hljs-attribute">--net</span>=reverse-proxy --restart always -e <span class="hljs-attribute">MONGO_INITDB_ROOT_USERNAME</span>=mongoadmin -e <span class="hljs-attribute">MONGO_INITDB_ROOT_PASSWORD</span>=secret -p 27017:27017 -d mongo
+<pre><code class="hljs">docker run --name mongo-container -v <span class="hljs-variable">$HOME</span>/mongo-data:/data/db --net=reverse-proxy --restart always -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret -<span class="hljs-selector-tag">p</span> <span class="hljs-number">27017</span>:<span class="hljs-number">27017</span> -d mongo
 
 
-sudo ufw allow 27017/tcp
+sudo ufw allow <span class="hljs-number">27017</span>/tcp
+
+curl -sL https:<span class="hljs-comment">//deb.nodesource.com/setup_10.x | sudo -E bash -</span>
+sudo apt-get install -y nodejs
+sudo npm <span class="hljs-selector-tag">i</span> -g prisma
 </code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/linux/shell"><span>Shell</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#digital-ocean">Digital ocean</a><ul class="toc-headings"><li><a href="#ssh-keys">SSH Keys</a></li><li><a href="#firewalls">Firewalls</a></li><li><a href="#set-timezone">Set Timezone</a></li><li><a href="#base-packages">Base packages</a></li><li><a href="#docker">Docker</a></li><li><a href="#reverse-proxy">Reverse-Proxy</a></li><li><a href="#basic-commands">Basic commands</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home" style="background:#fff"><img src="/img/uninode-long.png" alt="" width="66" height="58"/></a><div><h5>Packages</h5><a href="/docs/en/docs/packages/mobile">React Native Packages</a></div><div><h5>Social</h5><a href="https://twitter.com/mysticalaj" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Ajay More</section><div><script>
     var host = 'ajaymore.github.io';
