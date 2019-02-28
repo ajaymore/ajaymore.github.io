@@ -74,6 +74,7 @@ cd ~ && mkdir certs
 docker run -d -p 80:80 -p 443:443 \
     --name nginx-proxy \
     --net reverse-proxy \
+    --restart always \
     -v $HOME/certs:/etc/nginx/certs:ro \
     -v /etc/nginx/vhost.d \
     -v /usr/share/nginx/html \
@@ -84,6 +85,7 @@ docker run -d -p 80:80 -p 443:443 \
 docker run -d \
     --name nginx-letsencrypt \
     --net reverse-proxy \
+    --restart always \
     --volumes-from nginx-proxy \
     -v $HOME/certs:/etc/nginx/certs:rw \
     -v /var/run/docker.sock:/var/run/docker.sock:ro \
@@ -100,4 +102,11 @@ docker run -d \
 ```
 scp -i ~/.ssh/id_rsa -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 
+```
+
+```
+docker run --name mongo-container -v $HOME/mongo-data:/data/db --net=reverse-proxy --restart always -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret -p 27017:27017 -d mongo
+
+
+sudo ufw allow 27017/tcp
 ```
