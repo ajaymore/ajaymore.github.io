@@ -27,7 +27,10 @@ chmod 700 ~/.ssh
 nano ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 sudo systemctl reload sshd.service
-# Make sure to test the user acces without exiting
+# Make sure to test the user access without exiting
+
+# To remove previous known_hosts
+ssh-keygen -R ip:hostname
 ```
 
 ### Firewalls
@@ -44,6 +47,9 @@ sudo ufw allow ssh
 sudo ufw allow 22/tcp
 sudo ufw allow www
 sudo ufw allow 443/tcp
+
+ufw status numbered
+ufw delete number
 ```
 
 ### Set Timezone
