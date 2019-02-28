@@ -43,6 +43,7 @@ sudo ufw default allow outgoing
 sudo ufw allow ssh
 sudo ufw allow 22/tcp
 sudo ufw allow www
+sudo ufw allow 443/tcp
 ```
 
 ### Set Timezone
@@ -107,6 +108,10 @@ scp -i ~/.ssh/id_rsa -r user@your.server.example.com:/path/to/foo /home/user/Des
 ```
 docker run --name mongo-container -v $HOME/mongo-data:/data/db --net=reverse-proxy --restart always -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret -p 27017:27017 -d mongo
 
+docker exec -it mongo-container /bin/bash
+mongo --port 27017 -u "mongoadmin" -p "secret" --authenticationDatabase "admin"
+use admin
+db.updateUser("mongoadmin" , { roles: ["userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"]})
 
 sudo ufw allow 27017/tcp
 
