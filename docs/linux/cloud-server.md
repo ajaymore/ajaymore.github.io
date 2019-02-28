@@ -109,4 +109,8 @@ docker run --name mongo-container -v $HOME/mongo-data:/data/db --net=reverse-pro
 
 
 sudo ufw allow 27017/tcp
+
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo npm i -g prisma
 ```
