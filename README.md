@@ -1,1 +1,1 @@
-https://ajaymore.github.io/dev/docs/
+https://ajaymore.github.io/dev/docs/server/cloud-server
