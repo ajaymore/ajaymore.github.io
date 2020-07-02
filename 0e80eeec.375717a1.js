@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{147:function(t,e,i){"use strict";i.r(e);var n=i(0),o=i.n(n),a=i(184),r=i(180);e.default=function(){var t=Object(r.a)().siteConfig,e=void 0===t?{}:t;return o.a.createElement(a.a,{title:"Hello from "+e.title,description:"Description will go into a meta tag in <head />"})}}}]);
