@@ -4,8 +4,8 @@
   <ShortName>AjayMore</ShortName>
   <Description>Search AjayMore</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://ajaymore.github.io/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://ajaymore.github.io/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://ajaymore.github.io/opensearch.xml" />
-  <moz:SearchForm>https://ajaymore.github.io/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://ajaymore.in/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://ajaymore.in/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://ajaymore.in/opensearch.xml" />
+  <moz:SearchForm>https://ajaymore.in/</moz:SearchForm>
 </OpenSearchDescription>
