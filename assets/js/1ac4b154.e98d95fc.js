@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkajaymore=self.webpackChunkajaymore||[]).push([[1483],{2609:e=>{e.exports=JSON.parse('{"title":"YouTube","slug":"/category/youtube","permalink":"/docs/category/youtube","navigation":{"previous":{"title":"Resources","permalink":"/docs/travel/resources"},"next":{"title":"Resources","permalink":"/docs/youtube/resources"}}}')}}]);

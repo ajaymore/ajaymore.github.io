@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkajaymore=self.webpackChunkajaymore||[]).push([[3062],{7039:e=>{e.exports=JSON.parse('{"title":"Travel","slug":"/category/travel","permalink":"/docs/category/travel","navigation":{"previous":{"title":"Translate your site","permalink":"/docs/theories/translate-your-site"},"next":{"title":"Resources","permalink":"/docs/travel/resources"}}}')}}]);

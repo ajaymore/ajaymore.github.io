@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkajaymore=self.webpackChunkajaymore||[]).push([[8354],{5536:e=>{e.exports=JSON.parse('{"title":"Programming","slug":"/category/programming","permalink":"/docs/category/programming","navigation":{"previous":{"title":"Resources","permalink":"/docs/opinions/resources"},"next":{"title":"Cloud Server","permalink":"/docs/programming/cloud-server"}}}')}}]);

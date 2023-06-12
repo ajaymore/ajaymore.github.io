@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkajaymore=self.webpackChunkajaymore||[]).push([[5655],{4880:e=>{e.exports=JSON.parse('{"title":"CrossFit","slug":"/category/crossfit","permalink":"/docs/category/crossfit","navigation":{"previous":{"title":"Time","permalink":"/docs/intro"},"next":{"title":"Resources","permalink":"/docs/crossfit/resources"}}}')}}]);

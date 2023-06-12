@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkajaymore=self.webpackChunkajaymore||[]).push([[6157],{9291:e=>{e.exports=JSON.parse('{"title":"Food","slug":"/category/food","permalink":"/docs/category/food","navigation":{"previous":{"title":"Resources","permalink":"/docs/crossfit/resources"},"next":{"title":"Resources","permalink":"/docs/grow-your-food/resources"}}}')}}]);
