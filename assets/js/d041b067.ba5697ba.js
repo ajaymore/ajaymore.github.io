@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkajaymore=self.webpackChunkajaymore||[]).push([[6148],{2530:e=>{e.exports=JSON.parse('{"title":"Television","slug":"/category/television","permalink":"/docs/category/television","navigation":{"previous":{"title":"Full Stack Developer","permalink":"/docs/programming/fullstack"},"next":{"title":"Fantasy","permalink":"/docs/television/movies"}}}')}}]);
