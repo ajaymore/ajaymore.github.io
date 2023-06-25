@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkajaymore=self.webpackChunkajaymore||[]).push([[5888],{3325:e=>{e.exports=JSON.parse('{"title":"Opinion","slug":"/category/opinion","permalink":"/docs/category/opinion","navigation":{"previous":{"title":"Resources","permalink":"/docs/music/resources"},"next":{"title":"Resources","permalink":"/docs/opinions/resources"}}}')}}]);
