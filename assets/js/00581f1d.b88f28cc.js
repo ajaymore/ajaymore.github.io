@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkajaymore=self.webpackChunkajaymore||[]).push([[3214],{2149:a=>{a.exports=JSON.parse('{"label":"economics","permalink":"/blog/tags/economics","allTagsPath":"/blog/tags","count":1}')}}]);
