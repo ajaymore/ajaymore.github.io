@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkajaymore=self.webpackChunkajaymore||[]).push([["8416"],{6600(a){a.exports=JSON.parse('{"authors":[{"name":"Ajay More","title":"Maintainer of ajaymore.in","url":"https://github.com/ajaymore","imageURL":"https://avatars.githubusercontent.com/u/7659804?v=4","key":"ajay","page":null,"count":22}]}')}}]);
