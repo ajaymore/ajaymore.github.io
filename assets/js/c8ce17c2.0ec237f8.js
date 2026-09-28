@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkajaymore=self.webpackChunkajaymore||[]).push([[6426],{4148:e=>{e.exports=JSON.parse('{"title":"Music","slug":"/category/music","permalink":"/docs/category/music","navigation":{"previous":{"title":"Resources","permalink":"/docs/law-governance/resources"},"next":{"title":"Resources","permalink":"/docs/music/resources"}}}')}}]);
